@@ -8,11 +8,15 @@ def find_even_values(src)
     [99, 50, 3, 4],
     [23, 41] ]
 
-  p array_of_arrays[0][1]
- # => 2
-p array_of_arrays[1][0]
- # => 4
-p array_of_arrays[1][2]
- # => 6
-p array_of_arrays[2][1]
- # => 8
+    row_index = 0
+    while row_index < src.count do
+      element_index = 0
+      while element_index < src[row_index].count do
+        if src[row_index][element_index].even?
+          p src[row_index][element_index]
+        end
+        element_index += 1
+      end
+      row_index += 1
+    end
+  end
